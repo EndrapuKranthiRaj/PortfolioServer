@@ -8,13 +8,11 @@
     ],
   
        "routes": [
+           { "src": "/", "dest": "/" },
       { "src": "/about", "dest": "/about" },
-        { "src": "/projects", "dest": "/projects" },
-      {
-        "src": "/(.*)",
-        "dest": "/",
-        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
-      }
+    { "src": "/projects", "dest": "/projects" },
+           { "src": "/contact", "dest": "/contact" },
+
     ]
     
   }
