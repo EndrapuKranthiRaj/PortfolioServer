@@ -8,6 +8,7 @@ const PASS = process.env.PASS
 
 
 const app = express()
+app.use(express.json())
 
 //for cors start
 
@@ -21,7 +22,7 @@ const crosConfig ={
 
 //for cors end
 
-app.use(express.json())
+
 mongoose.connect(DATABASE)
 
 app.get('/', (req, res) => {
