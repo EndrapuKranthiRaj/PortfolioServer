@@ -14,6 +14,11 @@ app.use(express.json())
 
 mongoose.connect(DATABASE)
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+
 app.get('/all_projects',async (req,res) =>{
     try {
       const allproject = await UserModel.find({})
