@@ -64,3 +64,4 @@ UserModel.create(req.body)
 app.listen(3001,()=>{
     console.log("Serer is Running.....")
 })
+module.exports = app;
