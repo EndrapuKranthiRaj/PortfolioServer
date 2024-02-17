@@ -9,7 +9,6 @@ const PASS = process.env.PASS
 
 const app = express()
 app.use(express.json())
-console.log(DATABASE,PASS);
 //for cors start
 
 const crosConfig ={
