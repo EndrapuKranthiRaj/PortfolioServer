@@ -14,10 +14,13 @@ app.use(express.json())
 
 mongoose.connect(DATABASE)
 
-app.get('/',(req,res) =>{
-    UserModel.find({})
-    .then(allprojects => res.json(allprojects))
-    .catch(err => res.json(err))
+app.get('/all_projects',async (req,res) =>{
+    try {
+      const allproject = await UserModel.find({})
+      res.json(allproject);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
 })
 
 app.get('/projects/:id', async (req, res) => {
