@@ -9,13 +9,12 @@ const PASS = process.env.PASS
 
 const app = express()
 const crosConfig ={
-    origin: "*",
+    origin: ["https://portfolio-server-pearl.vercel.app"],
     methods : ["POST","GET"],
     credentials: true
   }
 
   app.use(cors(crosConfig))
-  app.options("",cors(crosConfig))
 
   app.use(express.json())
 mongoose.connect(DATABASE)
