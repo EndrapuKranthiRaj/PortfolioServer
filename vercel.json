@@ -5,13 +5,12 @@
         "src": "index.js",
         "use": "@vercel/node"
       }
-    ],
+            ],
   
        "routes": [
-           { "src": "/", "dest": "/" },
-      { "src": "/about", "dest": "/about" },
-    { "src": "/projects", "dest": "/projects" },
-           { "src": "/contact", "dest": "/contact" 
-    ]
-    
+        { "src": "/", "dest": "/" },
+        { "src": "/about", "dest": "/about" },
+        { "src": "/projects", "dest": "/projects" },
+        { "src": "/contact", "dest": "/contact" }
+                ]
   }
