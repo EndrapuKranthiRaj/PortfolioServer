@@ -8,6 +8,9 @@ const PASS = process.env.PASS
 
 
 const app = express()
+
+//for cors start
+
 const crosConfig ={
     origin: ["https://kranthi-raj-portfolio.vercel.app"],
     methods : ["POST","GET"],
@@ -16,7 +19,9 @@ const crosConfig ={
 
   app.use(cors(crosConfig))
 
-  app.use(express.json())
+//for cors end
+
+app.use(express.json())
 mongoose.connect(DATABASE)
 
 app.get('/', (req, res) => {
