@@ -9,7 +9,7 @@ const PASS = process.env.PASS
 
 const app = express()
 const crosConfig ={
-    origin: "*",
+    origin: ["https://kranthi-raj-portfolio.vercel.app"],
     methods : ["POST","GET"],
     credentials: true
   }
