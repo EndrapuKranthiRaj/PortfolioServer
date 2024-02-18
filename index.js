@@ -10,15 +10,7 @@ const PASS = process.env.PASS
 const app = express()
 app.use(express.json())
 //for cors start
-
-const crosConfig ={
-    origin: ["https://kranthi-raj-portfolio.vercel.app"],
-    methods : ["POST","GET"],
-    credentials: true
-  }
-
   app.use(cors())
-
 //for cors end
 
 
