@@ -16,10 +16,6 @@ app.use(express.json())
 
 mongoose.connect(DATABASE)
 
-app.get('*', (req, res) => {
-  res.redirect('https://kranthi-raj-portfolio.vercel.app');
-});
-
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
