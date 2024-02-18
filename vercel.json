@@ -8,9 +8,14 @@
     ],
   
        "routes": [
-      
-      {
+            {
         "src": "/[^.]+",
+        "dest": "/",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "status": 200
+      },
+      {
+        "src": "/(.*)",
         "status": 404,
         "dest": "/"
       }
