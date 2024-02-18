@@ -17,7 +17,7 @@ const crosConfig ={
     credentials: true
   }
 
-  app.use(cors(crosConfig))
+  app.use(cors())
 
 //for cors end
 
