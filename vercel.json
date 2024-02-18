@@ -9,17 +9,18 @@
   
        "routes": [
            { "handle": "filesystem" },
+        {
+        "src": "/(.*)",
+        "status": 404,
+        "dest": "/"
+      },
             {
         "src": "/[^.]+",
         "dest": "/",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "status": 200
-      },
-      {
-        "src": "/(.*)",
-        "status": 404,
-        "dest": "/"
       }
+           
     ]
     
   }
