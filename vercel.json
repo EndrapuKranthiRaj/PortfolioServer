@@ -15,7 +15,7 @@
         "dest": "/"
       },
             {
-        "src": "/[^.]+",
+        "src": "/(.*)",
         "dest": "/",
         "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         "status": 200
