@@ -8,7 +8,6 @@ const PASS = process.env.PASS
 
 
 const app = express()
-app.options('*',cors())
 app.use(express.json())
 //for cors start
   app.use(cors())
