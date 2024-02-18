@@ -11,6 +11,12 @@ const app = express()
 app.use(express.json())
 //for cors start
   app.use(cors())
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*'); // '*' allows any origin, you can restrict it to specific origins
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    next();
+});
 //for cors end
 
 
