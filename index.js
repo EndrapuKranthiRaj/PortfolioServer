@@ -57,12 +57,14 @@ app.get('/projects/:id', async (req, res) => {
   });
 
 
-app.post('/projects/newproject',(req,res)=>{
-UserModel.create(req.body)
-.then(allprojects => res.json(allprojects))
-.catch(err=> res.json(err))
-})
-
+app.post('/projects/newproject', async (req, res) => {
+  try {
+    const allProjects = await UserModel.create(req.body);
+    res.json(allProjects);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 app.listen(3001,()=>{
     console.log("Serer is Running.....")
