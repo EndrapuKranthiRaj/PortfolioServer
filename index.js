@@ -11,7 +11,7 @@ const app = express()
 app.use(express.json())
 //for cors start
 const crosConfig ={
-    origin: ["http://localhost:5173"],  // for vercl use https://kranthi-raj-portfolio.vercel.app
+    origin: ["https://kranthi-raj-portfolio.vercel.app"],  // for vercl use https://kranthi-raj-portfolio.vercel.app
     methods : ["POST","GET"],
     credentials: true
   }
