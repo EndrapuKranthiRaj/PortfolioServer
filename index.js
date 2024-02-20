@@ -59,7 +59,7 @@ app.get('/projects/:id', async (req, res) => {
 
 app.post('/projects/newproject',(req,res)=>{
 UserModel.create(req.body)
-.then(allprojects => res.jsonn(allprojects))
+.then(allprojects => res.json(allprojects))
 .catch(err=> res.json(err))
 })
 
